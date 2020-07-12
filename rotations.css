@@ -1,18 +1,99 @@
-.yoyo { 
-    width:50px; 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+    background-color: white;
+    /* The best color ever */
+}
+
+#frame {
+    height: 100vh;
+    width: 100vw;
+    animation: rotate 2s ease-in-out infinite;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+#game {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    height: 50vh;
+    width: 50vw;
+    position: relative;
+}
+
+#yoyo { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 5vw;
+    height: 5vw;
+    background:blue; 
+    /* width:50px; 
     height:50px; 
     margin-top:180px; 
-    border-radius: 50%;
     transform-origin:300% center;
     position:absolute; 
     top:200px;
     bottom:0;
     left:800px;
-    right:0;
-    animation:rotate 1s linear infinite; 
-  }
-  
-.yoyo:before { 
+    right:0; */
+    /* animation:rotate 1s linear infinite;  */
+}
+
+#rhand {
+    border-radius: 50%;
+    width: 5vw;
+    height: 5vw;
+    background: red;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* left: 0; */
+
+    /* border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-top:180px;
+    position: absolute;
+    top:200px;
+    bottom:0;
+    left:900px;
+    right:0; */
+}
+
+button {
+    position: absolute;
+    z-index: 100;
+    display: none;
+}
+
+
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/* .yoyo:before { 
+
+    border-radius: 50%;
+
     content:''; 
     position: absolute;
     top:0px;
@@ -20,34 +101,15 @@
     left:0px;
     right:0;
     height:100%; 
-    width:100%; 
-    background:blue; 
-    border-radius: 50%;
-    animation:rotate 2s linear reverse infinite; 
-  }
+    width:100%;  
+    animation:rotate 2s linear reverse infinite;  
+  } */
 
-.rhand {
-    width: 80px;
-    height: 80px;
-    margin-top:180px;
-    border-radius: 50%;
-    position: absolute;
-    top:200px;
-    bottom:0;
-    left:900px;
-    right:0;
-    background: red;
-}
-
-.rhand:before {
+  /* .rhand:before {
     content:'';
     position: absolute;
-}
+} */
 
-@keyframes rotate {
-     100% { transform:rotate(360deg); } 
-    }
-
-body { 
-    background: white; 
-} /* The best color ever */
+/* @keyframes rotate {
+    100% { transform:rotate(360deg); } 
+   } */
